@@ -1,0 +1,50 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("layered-waves-haikei.svg");
+}
+
+label{
+    font-size: 40px;
+    font-family: 'consolas';
+    color: hsl(147, 87%, 44%)
+}
+
+select{
+    font-family: 'MV Boli';
+    min-width: 200px;
+    font-size: 20px;
+    text-align: center;
+}
+form{
+    margin-top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1vh
+}
+
+#submit{
+    min-height: 40px;
+    min-width: 150px;
+    border-radius: 20px;
+    border: 3px solid transparent;
+    font-size: 25px;
+    font-family: cursive;
+    background-color: hsla(30, 5%, 15%, 0.808);
+    color: whitesmoke;
+
+}
+
+#submit:hover{
+    background-color: transparent;
+    border: 3px solid lightblue;
+    color: hsla(0, 4%, 5%, 0.826);
+    backdrop-filter: blur(10px);
+}
+#submit:active{
+    border: 3px solid transparent;
+    background-color: hsla(30, 5%, 15%, 0.508);
+}

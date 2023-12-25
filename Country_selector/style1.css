@@ -1,0 +1,28 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url("layered-waves-haikei1.svg");
+}
+
+p{
+    color: hsl(73, 79%, 50%);
+    font-size: 20px;
+    font-family: 'MV Boli';
+}
+
+a{
+    text-decoration: none;
+    color:rgb(219, 160, 11);
+}
+a:hover{
+    color: hsla(354, 79%, 48%, 0.829);
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+#flag{
+    border: 2px solid hsl(180, 80%, 47%);
+    box-shadow: 5px 5px 40px hsla(0, 19%, 88%, 0.929);
+}
