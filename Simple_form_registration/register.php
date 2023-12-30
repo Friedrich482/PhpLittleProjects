@@ -14,7 +14,7 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <p><b>Please fill this form to <i style="color: hsla(341, 90%, 43%, 0.847);">register</i></b></p>
+    <p><b>Please fill this form to <i style="color: cyan;">register</i></b></p>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
         <label for="email">Enter your email address : </label><br>
         <input type="email" name="email" id="email" required placeholder="Ex : example@gmail.com"><br>
@@ -23,13 +23,13 @@
         <input type="text" name="username" id="username" required placeholder="Ex : Paladin67"><br>
 
         <label for="password">Enter your password :</label><br>
-        <input type="password" name="password" id="password" required placeholder="*********"><br>
+        <input type="password" name="password" id="password" required placeholder="*********" minlength="8"><br>
 
         <input type="submit" value="Submit" name="submit" id="submit"><br>
         <label id="displayErrors"></label>
 
     </form>
-    <p id="redirection">Already registered? Click here to <a href="login.php">login</a></p>
+    <p id="redirection">Already registered? Click here to <a href="login.php">login</a></p><br>
 </body>
 </html>
 
@@ -56,27 +56,27 @@
                 //Register the username in the $_SESSION variable to use it later.
                 
                 $_SESSION["username"] = $username;
-                
+
+                $sql = "SELECT * FROM users where username = '$username'";   
+                $result = mysqli_query($conn, $sql);
+
+                if(mysqli_num_rows($result) > 0){
+                    $row = mysqli_fetch_assoc($result);
+                    $id_user = $row["id"];
+                }
+
+                header("Location: home.php?username=$username&id=$id_user");
+                exit();
             }
             catch(mysqli_sql_exception){
                 echo "  <script>
                             let displayErrors = document.getElementById('displayErrors');
-                            displayErrors.textContent = 'This email/username is already taken!';
+                            displayErrors.textContent = 'This email/username is already taken!❌';
                             displayErrors.style.color = 'red';
+                            displayErrors.style.fontSize = '30px'
                         </script>";
             }
             $stmt->close();
-            $sql = "SELECT * FROM users where username = '$username'";   
-            $result = mysqli_query($conn, $sql);
-
-            if(mysqli_num_rows($result) > 0){
-                $row = mysqli_fetch_assoc($result);
-                $id_user = $row["id"];
-            }
-            
-            header("Location: home.php?username=$username&id=$id_user");
-            exit();
-            
            
         }
     }

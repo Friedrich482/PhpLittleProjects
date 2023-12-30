@@ -24,7 +24,7 @@ form{
 input{
     text-align: center;
     border-radius: 20px;
-    border: 3px solid hsla(341, 90%, 43%, 0.847);
+    border: 3px solid darkmagenta;
     min-width: 40vh;
     min-height: 6vh;
 }
@@ -43,7 +43,7 @@ input{
 
 #submit:hover{
     background-color: white;
-    border: 3px solid rgba(227, 7, 106, 0.868);
+    border: 3px solid darkmagenta;
     color: black;
     box-shadow: 1px 1px 12px black;
     
@@ -55,7 +55,7 @@ input{
 }
 
 a{
-    color: hsla(17, 88%, 50%, 0.984);
+    color: cyan;
     text-decoration: none;
 }
 

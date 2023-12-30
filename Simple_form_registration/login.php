@@ -15,7 +15,7 @@
 </head>
 <body>
     
-    <p><b>Please fill this form to <i style="color: hsla(341, 90%, 43%, 0.847);">login</i></b></p>
+    <p><b>Please fill this form to <i style="color: cyan;">login</i></b></p>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
         
         <label for="username">Enter your username :</label><br>
@@ -75,6 +75,7 @@
                                 let displayErrors = document.getElementById('displayErrors');
                                 displayErrors.textContent = 'Incorrect password !       ❌';
                                 displayErrors.style.color = 'red';
+                                displayErrors.style.fontSize = '30px'
                             </script>";
                 }
             }
