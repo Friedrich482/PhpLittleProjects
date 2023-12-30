@@ -1,0 +1,69 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "MV Boli";
+    gap: 0.1vh;
+    background-image: url('layer.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:whitesmoke
+}
+h1{
+    font-size: 42px;
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+input{
+    text-align: center;
+    border-radius: 20px;
+    border: 3px solid hsla(341, 90%, 43%, 0.847);
+    min-width: 40vh;
+    min-height: 6vh;
+}
+
+#submit{
+    font-size: 20px;
+    min-width: 20vh;
+    border: 3px solid cyan;
+    background-color: black;
+    color: whitesmoke;
+    padding: 5px;
+    box-sizing: border-box;
+    font-family: 'consolas';
+    font-weight: bold;
+}
+
+#submit:hover{
+    background-color: white;
+    border: 3px solid rgba(227, 7, 106, 0.868);
+    color: black;
+    box-shadow: 1px 1px 12px black;
+    
+}
+#submit:active{
+    background-color: hsla(0, 0%, 0%, 0.678);
+    color:white;
+}
+
+a{
+    color: hsla(17, 88%, 50%, 0.984);
+    text-decoration: none;
+}
+
+a:hover{
+    font-size: 25px;
+    color: hsla(128, 84%, 48%, 0.904)
+}
+
+#redirection{
+    height: 5vh;
+    
+}

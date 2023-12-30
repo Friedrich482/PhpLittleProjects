@@ -9,23 +9,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
     <script src="script.js" defer></script>
 </head>
 <body>
     <h1>Welcome on my page</h1>
+    <p><b>Please fill this form to <i style="color: hsla(341, 90%, 43%, 0.847);">register</i></b></p>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
-        <label for="email">Enter your email adress : </label><br>
-        <input type="email" name="email" id="email" required><br>
+        <label for="email">Enter your email address : </label><br>
+        <input type="email" name="email" id="email" required placeholder="Ex : example@gmail.com"><br>
 
         <label for="username">Enter your username :</label><br>
-        <input type="text" name="username" id="username" required><br>
+        <input type="text" name="username" id="username" required placeholder="Ex : Paladin67"><br>
 
         <label for="password">Enter your password :</label><br>
-        <input type="password" name="password" id="password" required><br>
+        <input type="password" name="password" id="password" required placeholder="*********"><br>
 
-        <input type="submit" value="Submit" name="submit"><br>
+        <input type="submit" value="Submit" name="submit" id="submit"><br>
         <label id="displayErrors"></label>
+
     </form>
+    <p id="redirection">Already registered? Click here to <a href="login.php">login</a></p>
 </body>
 </html>
 
@@ -49,11 +53,6 @@
                 
                 $_SESSION["username"] = $username;
                 
-                // echo "  <script>
-                //             let displayErrors = document.getElementById('displayErrors');
-                //             displayErrors.textContent = 'You are now registered!';
-                //             displayErrors.style.color = 'green';
-                //         </script>";
             }
             catch(mysqli_sql_exception){
                 echo "  <script>
