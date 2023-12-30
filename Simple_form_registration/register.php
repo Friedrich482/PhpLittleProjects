@@ -49,11 +49,11 @@
                 
                 $_SESSION["username"] = $username;
                 
-                echo "  <script>
-                            let displayErrors = document.getElementById('displayErrors');
-                            displayErrors.textContent = 'You are now registered!';
-                            displayErrors.style.color = 'green';
-                        </script>";
+                // echo "  <script>
+                //             let displayErrors = document.getElementById('displayErrors');
+                //             displayErrors.textContent = 'You are now registered!';
+                //             displayErrors.style.color = 'green';
+                //         </script>";
             }
             catch(mysqli_sql_exception){
                 echo "  <script>
@@ -71,8 +71,8 @@
                 $id_user = $row["id"];
             }
             
-            // header("Location: home.php?username=$username&id=$id_user");
-            // exit();
+            header("Location: home.php?username=$username&id=$id_user");
+            exit();
             
            
         }
