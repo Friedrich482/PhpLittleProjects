@@ -1,5 +1,6 @@
 <?php
     include("database.php");
+    include("header.php");
     session_start();
 ?>
 <!DOCTYPE html>
@@ -13,7 +14,6 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Welcome on my page</h1>
     <p><b>Please fill this form to <i style="color: hsla(341, 90%, 43%, 0.847);">register</i></b></p>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
         <label for="email">Enter your email address : </label><br>
@@ -32,6 +32,10 @@
     <p id="redirection">Already registered? Click here to <a href="login.php">login</a></p>
 </body>
 </html>
+
+<?php
+    include('footer.php');
+?>
 
 <?php
     if($_SERVER["REQUEST_METHOD"] == "POST"){
