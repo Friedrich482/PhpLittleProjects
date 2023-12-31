@@ -43,13 +43,17 @@
 <body>
     <div id="visits_container">
         <button id="visitsDisplayerButton">&darr;</button>
-        <div id="visits">
+        <div id="visits" style="display: none;">
             You have visited this page <label><?php echo $number_of_visits?></label> times
         </div>
     </div>
     
-    <p id="welcome">Welcome <?php echo "{$_SESSION['username']}<br>"?></p>
-   
+    <h1 id="welcome">Welcome,<?php echo "{$_SESSION['username']}"?>, on my page 👋</h1>
+   <p id='catch'>What are we doing today ? 🙃</p>
+   <br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
+<?php
+    include('footer.php');
+?>
 

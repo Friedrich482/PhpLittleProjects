@@ -3,16 +3,25 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-image: url('layer.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: whitesmoke;
+    font-family: "MV Boli";
 }
 
 #welcome, #visits{
     font-size: 30px;
-    font-family: "MV Boli";
     text-align: center;
+    
 }
 
-label{
-    color: red;
+#welcome{
+    font-size: 42px;
+}
+
+#catch{
+    font-size: 30px;
 }
 
 #visits_container{
@@ -20,9 +29,21 @@ label{
     align-items: flex-end;
     justify-content: center;
     flex-direction: column;
+    gap:2vh;
     width: 100vh;
 }
 #visits{
     max-width: 35vh;
-    border: 1px solid pink;
 }
+
+#visitsDisplayerButton{
+    border: 4px solid lightblue;
+    font-family: cursive;
+    border-radius: 20px;
+    min-width: 90px;
+    font-size: 22px;
+    color: red;
+    padding: 5px;
+    background-color: black;
+}
+

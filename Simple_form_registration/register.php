@@ -72,7 +72,7 @@
             }
 
             catch(mysqli_sql_exception $exception){
-                echo "$exception";
+                
                 echo "<script src='register.js' defer></script>";
             }
 
