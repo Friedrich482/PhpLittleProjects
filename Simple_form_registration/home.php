@@ -50,9 +50,25 @@
     
     <h1 id="welcome">Welcome,<?php echo "{$_SESSION['username']}"?>, on my page 👋</h1>
    <p id='catch'>What are we doing today ? 🙃</p>
-   <br><br><br><br><br><br><br><br><br><br><br><br>
+   
+   <br><br><br><br><br><br><br><br><br><br>
+
+   <form action="home.php" method="post">
+        <input type="submit" value="Logout" name="logout" id="logout">
+   </form>
+
+
+   <br><br>
+
+   
 </body>
 </html>
+<?php
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+        session_destroy();
+        header("Location: login.php");
+    }
+?>
 <?php
     include('footer.php');
 ?>

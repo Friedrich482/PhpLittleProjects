@@ -47,3 +47,27 @@ body{
     background-color: black;
 }
 
+#logout{
+    border-radius: 20px;
+    font-size: 20px;
+    min-width: 20vh;
+    border: 3px solid cyan;
+    background-color: black;
+    color: whitesmoke;
+    padding: 5px;
+    box-sizing: border-box;
+    font-family: 'consolas';
+    font-weight: bold;
+}
+
+#logout:hover{
+    background-color: white;
+    border: 3px solid darkmagenta;
+    color: black;
+    box-shadow: 1px 1px 12px black;
+}
+
+#logout:active{
+    background-color: hsla(0, 0%, 0%, 0.678);
+    color:white;
+}
