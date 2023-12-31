@@ -68,6 +68,7 @@
 
                     $_SESSION["username"] = $username;
                     $id_user = $user["id"];
+                    $_SESSION['id'] = $id_user;
                     header("Location: home.php?username=$username&id=$id_user");
                     
                 } else {
