@@ -48,7 +48,6 @@
         
         if(!empty($email) && !empty($username) && !empty($password)){
             $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-            echo "$username<br>$email<br>$password";
             $stmt = $conn->prepare("INSERT INTO users (email, username, password) VALUES (?, ?, ?)");
             $stmt->bind_param("sss", $email, $username, $hashedPassword);
 
