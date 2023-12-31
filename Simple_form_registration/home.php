@@ -29,9 +29,8 @@
 
     $stmt->close();
     $conn->close();
-
-   
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,9 +38,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="home.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <p id="welcome">Welcome <?php echo "{$_SESSION['username']}<br>"?>You have visited this page <?php echo $number_of_visits?> times</p>
+    <div id="visits_container">
+        <button id="visitsDisplayerButton">&darr;</button>
+        <div id="visits">
+            You have visited this page <label><?php echo $number_of_visits?></label> times
+        </div>
+    </div>
+    
+    <p id="welcome">Welcome <?php echo "{$_SESSION['username']}<br>"?></p>
+   
 </body>
 </html>
 

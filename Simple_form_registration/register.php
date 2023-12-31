@@ -1,7 +1,8 @@
 <?php
+    session_start();
     include("database.php");
     include("header.php");
-    session_start();
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,11 +12,11 @@
     <title>Registration</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
-    <script src="script.js" defer></script>
+    
 </head>
 <body>
     <p><b>Please fill this form to <i style="color: cyan;">register</i></b></p>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post" id="registerForm">
         <label for="email">Enter your email address : </label><br>
         <input type="email" name="email" id="email" required placeholder="Ex : example@gmail.com"><br>
 
@@ -47,6 +48,7 @@
         
         if(!empty($email) && !empty($username) && !empty($password)){
             $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+            echo "$username<br>$email<br>$password";
             $stmt = $conn->prepare("INSERT INTO users (email, username, password) VALUES (?, ?, ?)");
             $stmt->bind_param("sss", $email, $username, $hashedPassword);
 
@@ -69,18 +71,17 @@
                 header("Location: home.php?username=$username&id=$id_user");
                 exit();
             }
-            catch(mysqli_sql_exception){
-                echo "  <script>
-                            let displayErrors = document.getElementById('displayErrors');
-                            displayErrors.textContent = 'This email/username is already taken!❌';
-                            displayErrors.style.color = 'red';
-                            displayErrors.style.fontSize = '30px'
-                        </script>";
+
+            catch(mysqli_sql_exception $exception){
+                echo "$exception";
+                echo "<script src='register.js' defer></script>";
             }
+
             $stmt->close();
            
         }
+        $conn->close();
     }
-    $conn->close();
+    
 ?>
 

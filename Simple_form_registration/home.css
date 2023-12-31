@@ -4,8 +4,25 @@ body{
     justify-content: center;
     flex-direction: column;
 }
-#welcome{
+
+#welcome, #visits{
     font-size: 30px;
     font-family: "MV Boli";
     text-align: center;
+}
+
+label{
+    color: red;
+}
+
+#visits_container{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vh;
+}
+#visits{
+    max-width: 35vh;
+    border: 1px solid pink;
 }
