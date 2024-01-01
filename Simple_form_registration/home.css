@@ -60,7 +60,7 @@ body{
     font-weight: bold;
 }
 
-#logout:hover{
+#logout:hover, .confirmButton:hover{
     background-color: white;
     border: 3px solid darkmagenta;
     color: black;
@@ -70,4 +70,24 @@ body{
 #logout:active{
     background-color: hsla(0, 0%, 0%, 0.678);
     color:white;
+}
+
+#confirmForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+}
+
+.confirmButton{
+    border-radius: 20px;
+    font-size: 20px;
+    min-width: 20vh;
+    border: 3px solid cyan;
+    background-color: black;
+    color: whitesmoke;
+    padding: 5px;
+    box-sizing: border-box;
+    font-family: 'consolas';
+    font-weight: bold;
 }

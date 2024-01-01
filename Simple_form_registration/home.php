@@ -49,14 +49,19 @@
     </div>
     
     <h1 id="welcome">Welcome,<?php echo "{$_SESSION['username']}"?>, on my page 👋</h1>
-   <p id='catch'>What are we doing today ? 🙃</p>
+    <p id='catch'>What are we doing today ? 🙃</p>
    
-   <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
 
-   <form action="home.php" method="post">
-        <input type="submit" value="Logout" name="logout" id="logout">
-   </form>
+    <form action="home.php" method="post">
+        <input type="button" value="Logout" name="logout" id="logout">
+    </form>
 
+    <form action="" method="post" style="display:none;" id="confirmForm">
+        <label for="">Are you sure to log out ?</label><br>
+        <input class = 'confirmButton' type="submit" value="Yes">
+        <input class = 'confirmButton' type="button" value="No" id="denyButton">
+    </form>
 
    <br><br>
 

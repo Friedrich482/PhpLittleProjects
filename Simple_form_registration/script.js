@@ -26,3 +26,26 @@ visitsDisplayerButton.addEventListener('click', () =>{
     visitsDisplayerButton.textContent = '\u2193'
    }
 })
+let logout = document.getElementById('logout');
+let confirmForm = document.getElementById('confirmForm');
+let denyButton = document.getElementById('denyButton');
+
+logout.addEventListener('click', () =>{
+   confirmForm.style.display = 'block';
+   logout.addEventListener('mouseover', () =>{
+      logout.style.backgroundColor = 'rgba(130, 125, 127, 0.89)';
+      
+   })
+   logout.addEventListener('mouseout', () =>{
+      logout.style.backgroundColor = 'black';
+   })
+})
+
+denyButton.addEventListener('click', () =>{
+   confirmForm.style.display = 'none';
+   logout.style.backgroundColor = 'black';
+   
+   logout.addEventListener('mouseover', () =>{
+      logout.style.backgroundColor = 'whitesmoke';
+   })
+})
