@@ -65,6 +65,7 @@
                     $row = mysqli_fetch_assoc($result);
                     $id_user = $row["id"];
                     $_SESSION['id'] = $id_user;
+                    $_SESSION['loggedin'] = true;
                 }
 
                 header("Location: home.php?username=$username&id=$id_user");

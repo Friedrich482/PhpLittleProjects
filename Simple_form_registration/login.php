@@ -1,7 +1,7 @@
 <?php
+    session_start();
     include("database.php");
     include("header.php");
-    session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,6 +69,7 @@
                     $_SESSION["username"] = $username;
                     $id_user = $user["id"];
                     $_SESSION['id'] = $id_user;
+                    $_SESSION['loggedin'] = true;
                     header("Location: home.php?username=$username&id=$id_user");
                     
                 } else {

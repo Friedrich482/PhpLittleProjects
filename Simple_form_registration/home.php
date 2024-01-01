@@ -1,6 +1,15 @@
 <?php
     session_start();
     include("database.php");
+
+
+    // Check if the user is logged in. Otherwise, redirect him to the login page.
+    
+    if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+        header('Location: login.php');
+        exit;
+    }
+
 ?>
 
 <?php
@@ -48,7 +57,8 @@
         </div>
     </div>
     
-    <h1 id="welcome">Welcome,<?php echo "{$_SESSION['username']}"?>, on my page 👋</h1>
+    <h1 id="welcome">Welcome <?php echo "{$_SESSION['username']}"?>, on my page 👋</h1>
+    
     <p id='catch'>What are we doing today ? 🙃</p>
    
     <br><br><br><br><br><br><br><br><br><br>
@@ -73,6 +83,7 @@
 </html>
 <?php
     if($_SERVER["REQUEST_METHOD"] == "POST"){
+        $_SESSION['loggedin'] = false;
         session_destroy();
         header("Location: login.php");
     }
