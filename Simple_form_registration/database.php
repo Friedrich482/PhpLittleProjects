@@ -2,7 +2,7 @@
     $dbServer = 'localhost';
     $dbUser = 'root';
     $dbPass = '';
-    $dbName = 'user_data';
+    $dbName = 'users_data';
     $conn = '';
 
     try{

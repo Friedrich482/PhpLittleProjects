@@ -47,7 +47,7 @@ body{
     background-color: black;
 }
 
-#logout{
+#logout, .confirmButton{
     border-radius: 20px;
     font-size: 20px;
     min-width: 20vh;
@@ -76,18 +76,16 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2vh;
+    gap: 20vh;
 }
 
-.confirmButton{
-    border-radius: 20px;
-    font-size: 20px;
-    min-width: 20vh;
-    border: 3px solid cyan;
-    background-color: black;
-    color: whitesmoke;
-    padding: 5px;
-    box-sizing: border-box;
-    font-family: 'consolas';
-    font-weight: bold;
+#sure{
+    font-size: 30px;
+}
+
+#confirmButtons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10vh;
 }

@@ -58,9 +58,12 @@
     </form>
 
     <form action="" method="post" style="display:none;" id="confirmForm">
-        <label for="">Are you sure to log out ?</label><br>
-        <input class = 'confirmButton' type="submit" value="Yes">
-        <input class = 'confirmButton' type="button" value="No" id="denyButton">
+        <label id="sure">Are you sure to log out ?</label><br>
+        <div id="confirmButtons">
+            <input class = 'confirmButton' type="submit" value="Yes ✅">
+            <input class = 'confirmButton' type="button" value="No ❌" id="denyButton">
+        </div>
+        
     </form>
 
    <br><br>
