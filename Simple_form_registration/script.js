@@ -49,3 +49,13 @@ denyButton.addEventListener('click', () =>{
       logout.style.backgroundColor = 'whitesmoke';
    })
 })
+
+
+// The eyes with the password
+
+let eyeSlashed = document.getElementById('eyeSlashed');
+
+eyeSlashed.addEventListener('click', () =>{
+   let password = document.getElementById('password');
+   password.type = 'text';
+})

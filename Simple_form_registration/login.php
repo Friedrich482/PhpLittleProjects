@@ -11,7 +11,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
-    <script src="script.js" defer></script>
+    <script src="scriptLogin.js" defer></script>
 </head>
 <body>
     
@@ -22,8 +22,12 @@
         <input type="text" name="username" id="username" required placeholder="Ex : Paladin67"><br>
 
         <label for="password">Enter your password :</label><br>
-        <input type="password" name="password" id="password" required placeholder="*********"><br>
-
+        <div id="passwordDiv">
+            <input type="password" name="password" id="password" required placeholder="*********" >
+            <img src="eye_slashed.jpg" id="eyeSlashed" alt="Eye slashed" title="Display the password"><br>
+        </div>
+        <br><br>
+        
         <input type="submit" value="Submit" name="submit" id="submit"><br>
         <label id="displayErrors"></label>
 

@@ -68,3 +68,23 @@ a:hover{
     height: 5vh;
     
 }
+
+#eyeSlashed{
+    height: 20px;
+    width: 20px;
+    position: relative;
+    right: 4vh;
+    user-select: none;
+}
+
+#passwordDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vh;
+    gap: 7vh;
+}
+#password{
+    position: relative;
+    left: 9vh
+}
