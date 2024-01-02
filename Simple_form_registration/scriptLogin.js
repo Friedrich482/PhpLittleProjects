@@ -7,7 +7,7 @@ eyeSlashed.addEventListener('click', () =>{
     if(password.type == 'password'){
         password.type = 'text';
         eyeSlashed.src = 'eye.png';
-        eyeSlashed.title = "Hide the password"
+        eyeSlashed.title = "Hide the password";
     }
     else{
         password.type = 'password';
