@@ -16,7 +16,7 @@
 <body>
     
     <p><b>Please fill this form to <i style="color: cyan;">login</i></b></p>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post" id="loginForm">
         
         <label for="username">Enter your username :</label><br>
         <input type="text" name="username" id="username" required placeholder="Ex : Paladin67"><br>
@@ -57,11 +57,8 @@
 
             if ($result->num_rows === 0) {
                 echo($result->num_rows);
-                echo "  <script>
-                            let displayErrors = document.getElementById('displayErrors');
-                            displayErrors.textContent = 'User not found! (ಥ _ ಥ)';
-                            displayErrors.style.color = 'red';
-                            displayErrors.style.fontSize = '30px';
+                echo "  <script src='loginUserNameNotFound.js' defer>
+                            
                         </script>";
             } 
             
