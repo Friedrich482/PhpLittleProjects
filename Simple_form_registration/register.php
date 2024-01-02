@@ -12,7 +12,7 @@
     <title>Registration</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
-    
+    <script src="registerTrueScript.js" defer></script>
 </head>
 <body>
     <p><b>Please fill this form to <i style="color: cyan;">register</i></b></p>
@@ -23,8 +23,12 @@
         <label for="username">Enter your username :</label><br>
         <input type="text" name="username" id="username" required placeholder="Ex : Paladin67"><br>
 
-        <label for="password">Enter your password :</label><br>
-        <input type="password" name="password" id="password" required placeholder="*********" minlength="8"><br>
+        <div id="passwordDiv">
+            <input type="password" name="password" id="password" required placeholder="**********" minlength="8">
+            <img src="eye_slashed.jpg" id="eyeSlashed" alt="Eye slashed" title="Display the password"><br>
+        </div>
+
+        <br><br>
 
         <input type="submit" value="Submit" name="submit" id="submit"><br>
         <label id="displayErrors"></label>

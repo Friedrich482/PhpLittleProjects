@@ -6,7 +6,9 @@ let isErrorDisplayed = false;
 // Prevent the submission of the form, so the data won't be sent and the user can correct them without having to re-entrer them
 
 registerForm.addEventListener('submit', event => {
+    
     if (!isErrorDisplayed) {
+        
         event.preventDefault();
         document.getElementById('email').focus();
 
@@ -17,10 +19,12 @@ registerForm.addEventListener('submit', event => {
         displayErrors.style.fontSize = '30px';
 
         isErrorDisplayed = true;
+        
     }
-
-
+    
 })
+
+
 
 
 

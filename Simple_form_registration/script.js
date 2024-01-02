@@ -50,12 +50,3 @@ denyButton.addEventListener('click', () =>{
    })
 })
 
-
-// The eyes with the password
-
-let eyeSlashed = document.getElementById('eyeSlashed');
-
-eyeSlashed.addEventListener('click', () =>{
-   let password = document.getElementById('password');
-   password.type = 'text';
-})
