@@ -1,2 +1,2 @@
 # PhpLittleProjects
-Shorts projects with JS and PHP
+Short projects with JS and PHP
