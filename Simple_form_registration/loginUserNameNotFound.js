@@ -15,12 +15,10 @@ loginForm.addEventListener('submit', event => {
         document.getElementById('username').focus();
 
         // Display error message
-
-        let displayErrors = document.getElementById('displayErrors');
-            displayErrors.textContent = 'User not found! (ಥ _ ಥ)';
-            displayErrors.style.color = 'red';
-            displayErrors.style.fontSize = '30px';
-
+        
+        displayErrors.textContent = 'User not found! (ಥ _ ಥ)';
+        displayErrors.style.color = 'red';
+        displayErrors.style.fontSize = '30px';
         isErrorDisplayed = true;
         
     }

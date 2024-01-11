@@ -1,18 +1,28 @@
-// The eyes with the password
+console.log('Form submission intercepted');
+document.addEventListener('DOMContentLoaded', function() {
+    
+    const loginForm = document.getElementById('loginForm');
+    const displayErrors = document.getElementById('displayErrors');
 
-let eyeSlashed = document.getElementById('eyeSlashed');
+    loginForm.addEventListener('submit', function(e) {
+        e.preventDefault();
 
-eyeSlashed.addEventListener('click', () =>{
-    let password = document.getElementById('password');
-    if(password.type == 'password'){
-        password.type = 'text';
-        eyeSlashed.src = 'eye.png';
-        eyeSlashed.title = "Hide the password";
-    }
-    else{
-        password.type = 'password';
-        eyeSlashed.src = 'eye_slashed.jpg';
-        eyeSlashed.title="Display the password"
-    }
-   
-})
+        const formData = new FormData(loginForm);
+        fetch('login_process.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                displayErrors.textContent = data.message;
+                displayErrors.style.color = 'red';
+            } else {
+                window.location.href = data.redirect;
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    });
+});
+
+

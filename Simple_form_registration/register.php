@@ -44,6 +44,7 @@
 
 <?php
     if($_SERVER["REQUEST_METHOD"] == "POST"){
+        
         $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
 
         $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
@@ -77,7 +78,8 @@
             }
 
             catch(mysqli_sql_exception $exception){
-                
+                // echo "error while registering : " . $exception->getMessage();
+
                 echo "<script src='register.js' defer></script>";
             }
 
