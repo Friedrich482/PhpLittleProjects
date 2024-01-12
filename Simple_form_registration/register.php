@@ -12,7 +12,7 @@
     <title>Registration</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
-    
+    <script src="eye.js" defer></script>
 </head>
 <body>
     <p><b>Please fill this form to <i style="color: cyan;">register</i></b></p>
@@ -37,29 +37,6 @@
         <script src="registerScript.js"></script> 
     </form>
     <p id="redirection">Already registered? Click here to <a href="login.php">login</a></p><br>
-    
-    <script>
-        // The eyes with the password
-        let eyeSlashed = document.getElementById('eyeSlashed');
-        let displayErrors = document.getElementById('displayErrors');
-
-        eyeSlashed.addEventListener('click', () =>{
-            let password = document.getElementById('password');
-            if(password.type == 'password'){
-                password.type = 'text';
-                eyeSlashed.src = 'eye.png';
-                eyeSlashed.title = "Hide the password";
-            }
-            else{
-                password.type = 'password';
-                eyeSlashed.src = 'eye_slashed.jpg';
-                eyeSlashed.title="Display the password"
-            }
-        
-        })
-        displayErrors.style.fontSize = '25px'
-    </script>
-    
 </body>
 </html>
 
