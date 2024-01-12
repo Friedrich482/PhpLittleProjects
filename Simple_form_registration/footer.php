@@ -1,6 +1,6 @@
 <?php ?>
 <footer>
-    &copy <label id="yearLabel"></label> @Friedrich482 🚀<b><span style = "color: greenyellow;">All</span> Rights Reserved</b>
+    &copy <label id="yearLabel"></label> @Friedrich482 🚀<b> <i style="color: lightgreen;">All</i> Rights Reserved</b>
 </footer>
 <script>
         let date = new Date();

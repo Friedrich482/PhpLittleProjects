@@ -1,5 +1,5 @@
 <?php ?>
 <header>
-    <h1>Welcome on my page</h1>
+    <h1>Friedrich's corner ✨</h1>
     <hr>
 </header>

@@ -8,7 +8,7 @@ visitsDisplayerButton.addEventListener('click', () =>{
     visits.style.border = '6px solid lightblue';
     visits.style.borderRadius = '20px';
 
-    visitsDisplayerButton.textContent = '\u2191'
+    visitsDisplayerButton.innerHTML = '<i class="fi fi-rr-angle-up"></i>'
     
     visitsDisplayerButton.style.color = 'red';
     visitsDisplayerButton.style.minWidth = '90px';
@@ -18,12 +18,13 @@ visitsDisplayerButton.addEventListener('click', () =>{
     visitsDisplayerButton.style.fontWeight = 'bold';
     visitsDisplayerButton.style.fontSize = '22px';
     visits.style.backgroundColor = 'black';
-    visitsDisplayerButton.style.backgroundColor = 'black'
+    visitsDisplayerButton.style.backgroundColor = 'black';
+    visitsDisplayerButton.style.textAlign = 'center';
    }
    
    else{
     visits.style.display = 'none';
-    visitsDisplayerButton.textContent = '\u2193'
+    visitsDisplayerButton.innerHTML = '<i class="fi fi-rr-angle-down">'
    }
 })
 let logout = document.getElementById('logout');
