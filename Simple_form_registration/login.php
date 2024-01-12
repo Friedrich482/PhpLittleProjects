@@ -36,6 +36,7 @@
     <script>
         // The eyes with the password
         let eyeSlashed = document.getElementById('eyeSlashed');
+        let displayErrors = document.getElementById('displayErrors');
 
         eyeSlashed.addEventListener('click', () =>{
             let password = document.getElementById('password');
@@ -51,6 +52,7 @@
             }
         
         })
+        displayErrors.style.fontSize = '25px'
     </script>
 </body>
 </html>
