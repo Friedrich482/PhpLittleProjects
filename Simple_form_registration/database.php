@@ -1,8 +1,8 @@
 <?php
     $dbServer = 'localhost';
-    $dbUser = 'root';
-    $dbPass = 'root';
-    $dbName = 'users_data';
+    $dbUser = 'root'; // Your username goes here
+    $dbPass = 'root'; // Your password goes here
+    $dbName = 'users_data'; // This database can be imported in phpMyAdmin via the usrers_data.sql file
     $conn = '';
 
     try{

@@ -14,7 +14,6 @@
     
 </head>
 <body>
-    
     <p><b>Please fill this form to <i style="color: cyan;">login</i></b></p>
     <form action="login_process.php" method="post" id="loginForm">
         
@@ -33,6 +32,7 @@
         <script src="scriptLogin.js"></script>
     </form>
     <p id="redirection">Not yet registersed? Click here to <a href="register.php">register</a></p><br>
+    
     <script>
         // The eyes with the password
         let eyeSlashed = document.getElementById('eyeSlashed');
@@ -61,71 +61,5 @@
     include('footer.php');
 ?>
 
-<?php
 
-    // if($_SERVER["REQUEST_METHOD"] == "POST"){
-    //     echo "<script>
-            
-    //     </script>";
-    //     $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
-        
-    //     $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
-        
-    //     if(!empty($username) && !empty($password)){
-            
-    //         $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
-    //         $stmt->bind_param("s", $username);
-    //         $stmt->execute();
-
-    //         $result = $stmt->get_result();
-
-    //         if ($result->num_rows === 0) {
-    //             // user is not found in this case.
-    //             $_SESSION['error'] = "User not found! (ಥ _ ಥ)";
-               
-    //             if (isset($_SESSION['error'])) {
-    //                 echo "<script>
-    //                         document.getElementById('loginForm').addEventListener('submit', (e) =>{
-    //                             e.preventDefault();
-    //                             document.getElementById('displayErrors').textContent = '" . $_SESSION['error'] . "';
-    //                         })
-    //                       </script>
-    //                 ";
-    //                 unset($_SESSION['error']); // Delete the message immediately after displayed it.
-    //             }
-    //         } 
-            
-    //         else {
-    //             $user = $result->fetch_assoc();
-    //             if (password_verify($password, $user['password'])) {
-    //                 // The password is correct
-
-    //                 $_SESSION["username"] = $username;
-    //                 $id_user = $user["id"];
-    //                 $_SESSION['id'] = $id_user;
-    //                 $_SESSION['loggedin'] = true;
-    //                 header("Location: home.php?username=$username&id=$id_user");
-                    
-    //             } else {
-    //                 // The password is not correct
-    //                 $_SESSION['error'] = "Incorrect password! ❌";
-               
-    //                 if (isset($_SESSION['error'])) {
-    //                     echo "<script>
-    //                         document.getElementById('displayErrors').innerHTML = '<p style=\'color: red;\'>" . $_SESSION['error'] . "</p>' 
-    //                       </script>
-    //                     ";
-    //                     unset($_SESSION['error']); // Delete the message immediately after displayed it.
-    //                 }
-    //             }
-    //         }
-
-    //         $stmt->close();
-    //         exit();
-            
-           
-    //     }
-    // }
-    // $conn->close();
-?>
 
